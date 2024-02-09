@@ -1,0 +1,137 @@
+.container{
+    width: 990px;
+    height: 536px;
+    margin: auto;
+    margin-top: 96px;
+    display: flex;
+}
+.title{
+    width: 541px;
+    height: 263px;
+    margin-top: 140px;
+}
+.title h3{
+    margin-inline: 6px;
+    font-size: 24px;
+    font-weight: inherit;
+}
+html{
+    background-color: #f4f4f4;
+}
+.signup{
+    width: 396px;
+    height: 456px;
+    margin-top: 51px;
+    margin-inline: 23px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    background-color: white;
+}
+.signup-container{
+    width: 396px;
+    height: 349px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 10px 10px 0px 0px;
+}
+.login{
+    width: 364px;
+    height: 52px;
+    margin-top: 15px;
+    margin-inline: 13px;
+    border-radius: 10px;
+
+}
+.password{
+    width: 364px;
+    height: 52px;
+    margin-top: 19px;
+    margin-inline: 13px;
+    border-radius: 10px;
+}
+button{
+    width: 364px;
+    height: 52px;
+    margin-top: 40px;
+    margin-inline: 13px;
+    border-radius: 10px;
+    background-color: #2568e7;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: #0540b1;
+}
+button a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFF;
+}
+.registration{
+    width: 284px;
+    height: 52px;
+    margin-top: 5px;
+    margin-inline: 53px;
+    border-radius: 10px;
+    background-color: green;
+    cursor: pointer;
+}
+.registration:hover{
+    background-color: #025202;
+}
+.popup{
+    width: 402px;
+    height: 459px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    right: -829px;
+    bottom: 485px;
+    display: none;
+}
+body{
+    overflow: hidden;
+}
+#register-popup{
+    width: 364px;
+    height: 52px;
+    margin-top: 53px;
+    margin-inline: 13px;
+    border-radius: 10px;
+}
+#password-popup{
+    width: 364px;
+    height: 52px;
+    margin-top: 28px;
+    margin-inline: 13px;
+    border-radius: 10px;
+}
+#repassword-popup{
+    width: 364px;
+    height: 52px;
+    margin-top: 29px;
+    margin-inline: 13px;
+    border-radius: 10px;
+}
+#var{
+    width: 284px;
+  height: 52px;
+  margin-top: 5px;
+  margin-inline: 53px;
+  border-radius: 10px;
+  background-color: green;
+  cursor: pointer;
+  margin-top: 23px;
+}
+.close-popup{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    right: -353px;
+    top: -348px;
+    cursor: pointer;
+}
