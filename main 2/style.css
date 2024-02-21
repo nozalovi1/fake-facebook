@@ -158,6 +158,7 @@ html{
     top: 33px;
     right: 44px;
     display: flex;
+    border: 1px solid #1a71f8;
 }
 .moon p{
     position: relative;
@@ -172,6 +173,7 @@ html{
     background-color: inherit;
     border: none;
     color: white; 
+    font-size: 15px;
 }
 .add-your-post h2{
   color: white;
@@ -180,6 +182,7 @@ html{
   left: 18px;
   font-size: 17px;
   font-weight: inherit;
+  width: 150px;
 }
 .logoebi{
     width: 36px;

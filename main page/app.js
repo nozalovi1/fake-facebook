@@ -1,9 +1,11 @@
+
 const loginInput = document.querySelector('.login');
 const passwordInput = document.querySelector('.password');
 const loginButton = document.querySelector('button');
-const registerInput = document.getElementById('register-popup');
+const emailInput = document.getElementById('register-popup');
 const passwordInputt = document.getElementById('password-popup');
 const repasswordInput = document.getElementById('repassword-popup');
+
 
 loginInput.addEventListener('input', function() {
     if (this.value.length < 5) {
@@ -21,14 +23,14 @@ passwordInput.addEventListener('input', function() {
     }
 });
 
-loginButton.addEventListener('click', function(event) {
+loginButton.addEventListener('submit', function(event) {
     event.preventDefault(); 
     const loginValue = loginInput.value;
     const passwordValue = passwordInput.value;
 
     if (loginValue.length < 5 || passwordValue.length < 5) {
         alert('ელ-ფოსტა და პაროლი უნდა იყოს 8 სიმბოლოზე მეტი!');
-    }
+    }       
 });
 
 loginInput.addEventListener('input', function() {
@@ -38,7 +40,7 @@ loginInput.addEventListener('input', function() {
         loginButton.style.cursor = 'pointer';
     }
 });
-registerInput.addEventListener('input', function() {
+emailInput.addEventListener('input', function() {
     if (this.value.length < 8) {
         this.style.borderColor = 'red'; 
         this.style.borderColor = 'Green'; 
@@ -72,7 +74,7 @@ function checkPasswords() {
         repasswordInput.style.borderColor = 'red';
     }
 }
-registerInput.addEventListener('input', function() {
+emailInput.addEventListener('input', function() {
     const inputValue = this.value;
     const borderColor = inputValue.includes('@') ? 'green' : 'red';
     this.style.borderColor = borderColor;
@@ -88,4 +90,40 @@ passwordInputt.addEventListener('input', checkPasswords);
 repasswordInput.addEventListener('input', checkPasswords);
 
 
-   
+
+document.getElementById("var").addEventListener("click", function() {
+    let email = document.getElementById("register-popup").value.trim();
+    let password = document.getElementById("password-popup").value.trim();
+    let repassword = document.getElementById("repassword-popup").value.trim();
+
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+    localStorage.setItem("repassword", repassword);
+});
+
+
+let email = localStorage.getItem("email");
+let repassword = localStorage.getItem("password");
+
+
+
+
+document.getElementById("next").addEventListener("click", function(event) {
+    let savedEmail = localStorage.getItem("email");
+    let savedPassword = localStorage.getItem("password");
+
+    if (savedEmail && savedPassword) {
+        let email = document.querySelector(".login").value.trim();
+        let password = document.querySelector(".password").value.trim();
+
+        if (email === savedEmail && password === savedPassword) {
+            return true;
+        } else {
+            alert("არასწორი ელფოსტა ან პაროლი!");
+            event.preventDefault(); 
+        }
+    }
+});
+
+
+
